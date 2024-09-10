@@ -7,7 +7,7 @@
 # dev file
 */dev-*.yaml
 # venv
-*/diagrid-venv
+diagrid-venv
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
