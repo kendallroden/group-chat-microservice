@@ -9,9 +9,8 @@ import logging
 import os
 from models.user_model import UserModel
 
-user_db = os.getenv('DAPR_USERS_TABLE', '')
-pubsub_name = os.getenv('DAPR_AWS_PUB_SUB_BROKER', '')
-group_subscription_topic = os.getenv('DAPR_GROUP_SUBSCRIPTION_TOPIC', '')
+user_db = os.getenv('USERS_TABLE', 'user-service-table')
+group_subscription_topic = os.getenv('GROUP_SUBSCRIPTION_TOPIC', 'group-subscription-topic')
 
 app = FastAPI()
 

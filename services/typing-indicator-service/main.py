@@ -10,10 +10,8 @@ import os
 from models.typing_model import TypingModel
 from models.cloud_events import CloudEvent
 
-typing_indicator_db = os.getenv('DAPR_TYPING_INDICATOR_TABLE', '')
-
-pubsub_name = os.getenv('DAPR_AWS_PUB_SUB_BROKER', '')
-group_subscription_topic = os.getenv('DAPR_GROUP_SUBSCRIPTION_TOPIC', '')
+typing_indicator_db = os.getenv('TYPING_INDICATOR_TABLE', 'typing-indicator-service-table')
+group_subscription_topic = os.getenv('GROUP_SUBSCRIPTION_TOPIC', 'group-subscription-topic')
 
 app = FastAPI()
 

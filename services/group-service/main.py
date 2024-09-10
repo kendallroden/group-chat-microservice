@@ -11,9 +11,9 @@ from models.group_model import GroupModel, MessageModel, Member
 from models.add_group_participant_model import AddGroupParticipantModel
 from models.cloud_events import CloudEvent
 
-group_db = os.getenv('DAPR_GROUPS_TABLE', '')
-pubsub_name = os.getenv('DAPR_AWS_PUB_SUB_BROKER', '')
-group_subscription_topic = os.getenv('DAPR_GROUP_SUBSCRIPTION_TOPIC', '')
+group_db = os.getenv('GROUPS_TABLE', 'group-service-table')
+pubsub_name = os.getenv('PUBSUB_COMPONENT_NAME', 'aws-pubsub')
+group_subscription_topic = os.getenv('GROUP_SUBSCRIPTION_TOPIC', 'group-subscription-topic')
 
 app = FastAPI()
 

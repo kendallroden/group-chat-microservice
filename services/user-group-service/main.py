@@ -6,9 +6,8 @@ from dapr.clients import DaprClient, grpc
 from fastapi import FastAPI, HTTPException
 from models.user_group_model import UserGroupModel
 
-user_group_table = os.getenv('DAPR_USER_GROUPS_TABLE', '')
-pubsub_name = os.getenv('DAPR_AWS_PUB_SUB_BROKER', '')
-group_subscription_topic = os.getenv('DAPR_GROUP_SUBSCRIPTION_TOPIC', '')
+user_group_table = os.getenv('USER_GROUPS_TABLE', 'user-group-service-table')
+group_subscription_topic = os.getenv('GROUP_SUBSCRIPTION_TOPIC', 'group-subscription-topic')
 
 app = FastAPI()
 
