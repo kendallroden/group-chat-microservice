@@ -5,7 +5,7 @@
 .venv
 # Diagrid
 # dev file
-*/dev-*.yaml
+dev-*.yaml
 # venv
 diagrid-venv
 # Python Tools for Visual Studio (PTVS)
